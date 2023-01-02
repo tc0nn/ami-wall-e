@@ -14,7 +14,7 @@ debug=40 # turn on extra slack messages # this can be overwritten by creating /r
 ################################################### VERIFY WE HAVE THE REQUIRED MODULES
 #import imp
 import os
-import pprint,sys,platform,multiprocessing,ast,holidays,zoneinfo
+import pprint,sys,platform,multiprocessing,ast,zoneinfo
 from importlib import reload
 from inspect import currentframe, getframeinfo 
 import time, json,re, subprocess, logging, socket
@@ -2176,6 +2176,5 @@ if 0: #__name__ == "__main__":
     app.run(port=tcp_port,host='0.0.0.0')
 
 eprint("EXITING - EOF")
-
 
 

@@ -11,10 +11,10 @@ apscheduler
 #urllib3==1.25.7
 urllib3
 #multiprocessing
-holidays
+holidays==2.4.0
 #websocket
 websocket-client
 requests
 slack_bolt
 duo_client
-#zoneinfo
+#zoneinfoslack_sdk
