@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 disney=1
 tcp_port=80
-running_environment="development"
+#running_environment="development"
 #running_environment="production"
-#running_environment="tims-house"
+running_environment="tims-house"
 
 debug=40 # turn on extra slack messages # this can be overwritten by creating /root/repos/IT/slackbot/debug or sending !debug X
 
@@ -22,7 +22,7 @@ from datetime import datetime, timedelta, date
 import urllib.request
 from random import seed
 from random import random,randint
-import slack_sdk
+#import slack_sdk
 from slack_sdk.rtm import RTMClient
 
 start_time=time.time()
@@ -337,7 +337,7 @@ def lookup_channel(id):
         eprint(getframeinfo(currentframe()).function+"::"+str(getframeinfo(currentframe()).lineno) + ": lookup channel failed: "+str(err)) 
     return
 
-channelsinfo[id]=lookup_channel('G01074YHFG9')
+channelsinfo[id]=lookup_channel('C0496CWKY5V') #wall-e-control-channel (AMI)
 
 
 def uptime():
@@ -2154,9 +2154,6 @@ else:
 
 ################################################################################################################
 
-
-
-
 if os.environ['APP_ENV']==running_environment:
     eprint("starting rtm_client")
     message=str(getframeinfo(currentframe()).lineno)+": "+botname+" is running on " + myhostname
@@ -2176,5 +2173,4 @@ if 0: #__name__ == "__main__":
     app.run(port=tcp_port,host='0.0.0.0')
 
 eprint("EXITING - EOF")
-
 
